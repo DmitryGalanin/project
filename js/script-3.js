@@ -101,21 +101,292 @@
 
 // console.log(getTimeFromMinutes(527));
 
-function findMaxNumber(num1, num2, num3, num4) {
-    if (num1 == undefined || num2 == undefined || num3 == undefined || num4 == undefined || typeof(num1) === 'string' || typeof(num2) === 'string' || typeof(num3) === 'string' || typeof(num4) === 'string') {
-        return 0;
-    } else {
-        let arr = [num1, num2, num3, num4];
-        let bigNum = arr[0];
-        for (let i = 0; i < 4; i++) {   
-            for (let j = 0; j < 4; j++) {
-                if (arr[i] < arr[j] && bigNum < arr[j]) {
-                    bigNum = arr[j];
-                }
-            } 
-        } 
-        return bigNum;   
-    }
-}
+// function findMaxNumber(num1, num2, num3, num4) {
+//     if (num1 == undefined || num2 == undefined || num3 == undefined || num4 == undefined || typeof(num1) === 'string' || typeof(num2) === 'string' || typeof(num3) === 'string' || typeof(num4) === 'string') {
+//         return 0;
+//     } else {
+//         let arr = [num1, num2, num3, num4];
+//         let bigNum = arr[0];
+//         for (let i = 0; i < 4; i++) {   
+//             for (let j = 0; j < 4; j++) {
+//                 if (arr[i] < arr[j] && bigNum < arr[j]) {
+//                     bigNum = arr[j];
+//                 }
+//             } 
+//         } 
+//         return bigNum;   
+//     }
+// }
 
-console.log(findMaxNumber(0, 5, 6.7, 4));
+// console.log(findMaxNumber(0, 5, 6.7, 4));
+
+// Числа Фибоначчи
+
+// function fib(num) {
+//     let arr = [];
+//     let string = '';
+
+//     if (!Number.isInteger(num) || num < 0 || num < 1) {
+//         return '';
+//     } else if (num <= 1) {
+//         arr[0] = 0;
+//         string += arr[0];
+//         return string;                
+//     } else if (num <= 2) {
+//         arr[0] = 0;
+//         arr[1] = 1;
+//         string += arr[0] + ' ';
+//         string += arr[1];
+//         return string;       
+//     } else if (num > 2) {
+//         arr = [0, 1];
+//         string = '0 1 ';
+
+//         for (let i = 2; i < (num - 1); i++) {
+//             arr[i] = arr[i - 1] + arr[i - 2];
+//             string += arr[i] + ' ';            
+//         }        
+//         arr[num] = (arr[num - 2] + arr[num - 3]);
+//         string += arr[num];
+//         return string;
+//     }
+// }
+
+// console.log(fib(7));
+
+
+// callback функции
+
+// function first() {
+//     // Do something
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 2000);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// function firstSecond(one, two) {
+//     one();
+//     two();
+// }
+
+// firstSecond(first, second);
+
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу ${lang}`);
+//     callback();
+// };
+
+// learnJS('JavaScript', function() {
+//     console.log('Я прошёл этот урок');
+// })
+
+
+
+
+
+
+
+// -------- Урок 35 ------------
+
+
+// let a = 5,
+//     b = a;
+
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; // Ссылку
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+// -- Делаем поверхностную копию объекта--
+
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];        
+//     }
+//     return objCopy;
+// }
+
+// const numbers  = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+
+// newNumbers['a'] = 10;
+
+// console.log(numbers);
+// console.log(newNumbers);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// console.log(Object.assign(numbers, add));
+
+// const clone = Object.assign({}, add);
+
+// console.log(clone);
+
+
+// -- Делаем поверхностную копию массива --
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'qwerty';
+
+// console.log(newArray);
+// console.log(oldArray);
+
+// -- Spread оператор --
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
+
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+// const obj = {
+//     one: 1,
+//     two: 2,
+//     three: 3
+// };
+
+// const newObj = {...obj}
+
+// console.log(obj);
+// console.log(newObj);
+
+// ------ Упражнение по написанию кода 10: Задачи на работу с объектами ---------
+
+// Деструктуризация объъектов
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     }
+// };
+
+// console.log(options);
+
+// // const {border, bg} = options.colors;
+
+// console.log(border);
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+// function showExperience(plan) {
+//     const {languages, programmingLangs, exp} = plan.skills;
+//     return exp;
+// }
+
+// // console.log(showExperience(personalPlanPeter));
+
+// // "Язык js изучен на 20% Язык php изучен на 10%"
+
+// function showProgrammingLangs(plan) {
+//     const {languages, programmingLangs, exp} = plan.skills;
+//     let stroke = '';
+
+//     for (let key in programmingLangs) {
+//         stroke += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+//     }
+
+//     console.log(stroke);
+//     return stroke;
+// }
+
+// // showProgrammingLangs(personalPlanPeter);
+
+// // personalPlanPeter.showAgeAndLangs(personalPlanPeter)
+// // => 'Мне 29 и я владею языками: RU ENG'
+
+// personalPlanPeter.showAgeAndLangs = function(plan) {
+//     let stroke = `Мне ${plan['age']} и я владею языками: `;
+
+//     const {languages, programmingLangs, exp} = plan.skills;
+
+//     for (let key in languages) {
+//         stroke += `${languages[key]} `.toUpperCase();
+//     }
+
+//     console.log(stroke);
+//     return stroke;
+// } 
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+// ------ Урок 33. Массивы и псевдомассивы ---------
+
+const arr = [2, 3, 6, 8, 10];
+
+// arr.pop();
+// arr.push(12);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+})
