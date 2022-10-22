@@ -41,4 +41,4 @@ function getCoupeNumber(num) {
     }
 }
 
-console.log(getCoupeNumber(0));
+console.log(getCoupeNumber(2));
