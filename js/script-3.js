@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // function calculateVolumeAndArea(num) {
 //     if (isNaN(num) || num <= 0 || !Number.isInteger(num)) {
@@ -372,7 +372,7 @@
 
 // ------ Урок 33. Массивы и псевдомассивы ---------
 
-const arr = [2, 3, 6, 8, 10];
+// const arr = [2, 3, 6, 8, 10];
 
 // arr.pop();
 // arr.push(12);
@@ -387,3 +387,58 @@ const arr = [2, 3, 6, 8, 10];
 //     console.log(value);
 // }
 
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     if (arr.length < 1) {
+//         return 'Семья пуста';
+//     } else {
+//         let stroke = 'Семья состоит из: ';
+//         stroke += arr.join(' ');
+//         return stroke;
+//     }    
+// }
+
+// console.log(showFamily(family));
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     for (let key of arr) {
+//         console.log(key.toLowerCase());
+//     }
+// }
+
+// standardizeStrings(favoriteCities);
+
+// const someString = 'This is some strange string';
+// const someString2 = 2;
+
+// function reverse(str) {
+//     let newString = '';
+//     if (typeof str == 'string') {
+//         for (let i = str.length - 1; i >= 0; i--) {
+//             newString += str[i];        
+//         }
+//         return newString;
+//     } else {
+//         return 'Ошибка!';
+//     }
+// }
+
+// console.log(reverse(someString));
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+let allCurrencies = baseCurrencies.concat(additionalCurrencies);
+
+// console.group(allCurrencies);
+
+function availableCurr(arr, missingCurr) {
+    return arr;
+}
+
+let missingCurr = 'UAH';
+
+console.log(availableCurr( allCurrencies, missingCurr));
