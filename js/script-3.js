@@ -428,17 +428,60 @@
 
 // console.log(reverse(someString));
 
-const baseCurrencies = ['USD', 'EUR'];
-const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 
-let allCurrencies = baseCurrencies.concat(additionalCurrencies);
+// let allCurrencies = baseCurrencies.concat(additionalCurrencies);
 
-// console.group(allCurrencies);
+// // console.log(allCurrencies);
 
-function availableCurr(arr, missingCurr) {
-    return arr;
-}
+// let missingCurr = 'UAH';
 
-let missingCurr = 'UAH';
+// function availableCurr(arr, missingCurr) {
+//     let answer = 'Доступные валюты:\n';
+//     if (arr.length !== 0) {
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] == missingCurr) {
+//                 continue;            
+//             } else {
+//                 answer += `${arr[i]}\n`;            
+//             }
+//         }
+//         return answer;
+//     } else {
+//         return 'Нет доступных валют';
+//     }   
+// }
 
-console.log(availableCurr( allCurrencies, missingCurr));
+
+
+// console.log(availableCurr(allCurrencies, missingCurr));
+
+
+// ------ Урок 36. Основы ООП, прототипно-ориентированное наследование ---------
+
+// console.dir([1, 2, 3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+
+// const john = Object.create(soldier);
+
+// // const john = {
+// //     health: 100
+// // }
+
+// // john.__proto__ = soldier;
+// Object.setPrototypeOf(john, soldier);
+
+// console.log(john.armor);
+
+
+
+// // console.log(John.armor);
+// john.sayHello();
