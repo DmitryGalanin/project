@@ -482,6 +482,91 @@
 // console.log(john.armor);
 
 
-
 // // console.log(John.armor);
 // john.sayHello();
+
+
+
+// ------ (*) Продвинутая задача на работу с объектами и массивами ---------
+
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 15,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 10
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// }
+
+// function isBudgetEnough(data) {
+//     let totalArea = 0;
+//     for (let value of data.shops) {
+//         totalArea += (value.width * value.length);
+//     } 
+//     let totalVolume = totalArea * data.height;
+//     let budgetRequired = totalVolume * data.moneyPer1m3;
+//     if (data.budget < budgetRequired) {
+//         return 'Бюджета недостаточно';
+//     } else {
+//         return 'Бюджета достаточно';
+//     }
+// }
+
+// // isBudgetEnough(shoppingMallData);
+// console.log(isBudgetEnough(shoppingMallData));
+
+// ------ Упражнение по написанию кода 14: (*) Продвинутая задача на работу с объектами и массивами ---------
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+//     arr.sort();
+//     let groupOne = [];
+//     let groupTwo = [];
+//     let groupThree = [];
+//     for (let key in arr) {
+//         if (key < 3) {
+//             groupOne.push(arr[key]);
+//         } else if (key < 6) {
+//             groupTwo.push(arr[key]);
+//         } else if (key < 9) {
+//             groupThree.push(arr[key]);
+//         } 
+//     };
+
+//     let stroke = 'Оставшиеся студенты:';
+
+//     if (arr.length > 9) {
+//         for (let k = 9; k < arr.length; k++) {
+//             if (k == 9) {
+//                 stroke += ` ${arr[k]}`;
+//             } else {
+//                 stroke += `, ${arr[k]}`;
+//             }                        
+//         }
+//     } else {
+//         stroke += ` -`;
+//     }
+
+//     let newArr = [groupOne, groupTwo, groupThree, stroke];
+//     return newArr;
+
+// }    
+
+
+// console.log(sortStudentsByGroups(students));
