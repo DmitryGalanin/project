@@ -570,3 +570,127 @@
 
 
 // console.log(sortStudentsByGroups(students));
+
+
+// let number = 5;
+
+// function logNumber() {
+//     console.log(number)
+// }
+
+// logNumber();
+
+// number = 6;
+
+// logNumber();
+
+
+
+// const calc = (a, b) => {
+//     console.log('1');
+//     return a + b;
+// };
+
+// calc(1, 2);
+
+
+//  Какое будет выведено значение: let x = 5; alert( x++ ); ?
+//  Чему равно такое выражение: [ ] + false - null + true ?
+//  Что выведет этот код: let y = 1; let x = y = 2; alert(x); ?
+//  Чему равна сумма [ ] + 1 + 2?
+//  Что выведет этот код: alert( &quot;1&quot;[0] )?
+//  Чему равно 2 &amp;&amp; 1 &amp;&amp; null &amp;&amp; 0 &amp;&amp; undefined ?
+//  Есть ли разница между выражениями? !!( a &amp;&amp; b ) и (a &amp;&amp; b)?
+//  Что выведет этот код: alert( null || 2 &amp;&amp; 3 || 4 ); ?
+//  a = [1, 2, 3]; b = [1, 2, 3]; Правда ли что a == b ?
+//  Что выведет этот код: alert( +&quot;Infinity&quot; ); ?
+//  Верно ли сравнение: &quot;Ёжик&quot; &gt; &quot;яблоко&quot;?
+//  Чему равно 0 || &quot;&quot; || 2 || undefined || true || falsе ?
+
+
+// const restorantData = {
+//     menu: [
+//         {
+//             name: 'Salad Caesar',
+//             price: '14$'
+//         },
+//         {
+//             name: 'Pizza Diavola',
+//             price: '9$'
+//         },
+//         {
+//             name: 'Beefsteak',
+//             price: '17$'
+//         },
+//         {
+//             name: 'Napoleon',
+//             price: '7$'
+//         }
+//     ],
+//     waitors: [
+//         {name: 'Alice', age: 22}, {name: 'John', age: 24}
+//     ],
+//     averageLunchPrice: '20$',
+//     openNow: true
+// };
+
+
+// console.log(restorantData2['openNow']);
+
+// function isOpen(prop) {
+//     let answer = '';
+//     prop ? answer = 'Открыто' : answer = 'Закрыто';
+
+//     return answer;
+// }
+
+// console.log(isOpen(restorantData.openNow))
+
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+
+ 
+//     if ((parseInt(fDish['price']) + parseInt(sDish['price'])) < parseInt(average)) {
+//         return 'Цена ниже средней';
+//     } else {
+//         return 'Цена выше средней';
+//     }
+// }
+
+
+// console.log(isAverageLunchPriceTrue(restorantData.menu[1], restorantData.menu[3], restorantData.averageLunchPrice));
+
+// function transferWaitors(data) {
+
+//     const copy = {};
+    
+//     for (let key in data) {
+
+//         if (Array.isArray(data[key])) {
+//             // console.log(' содержит массив');
+//             copy[key] = [];
+//             // console.log(data[key].length);
+//             for (let i = 0; i < data[key].length; i++) {
+//                 // console.log(temporaryObj);
+//                 let a = {};
+//                 // let b = Object.assign({}, data[key][i]);
+//                 a = Object.assign({}, data[key][i]);
+//                 // console.log(a);
+//                 copy[key].push(a);
+//             }             
+//         } else {
+//             // console.log(' не содержит массив');
+//             copy[key] = data[key];
+//         }        
+//     }
+//     copy.waitors[0] = {name: 'Mike', age: 32};
+//     // console.log(copy);
+//     // console.log(restorantData);
+//     return copy;
+    
+// }
+
+// transferWaitors(restorantData);
+
+//console.log(transferWaitors(restorantData));
+
+// const hearts = document
