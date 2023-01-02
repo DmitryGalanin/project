@@ -114,22 +114,28 @@
 
 // Задача на рекурсию . Факториал
 
-function factorial(n) {   
-    if (typeof n === "number" && Number.isInteger(n)) {
-        let total = n;        
+// function factorial(n) {   
+//     if (typeof n === "number" && Number.isInteger(n)) {
+//         let total = n;        
 
-        if (n <= 0) {       
-            return 1;
-        } else if (n === 1) {       
-            return total;
-        }  else {        
-            total *= factorial(n - 1);
-        }  
-        return(total);
-    } else {
-        return 'Введите целое не отрицательное число';
-    }
-}
+//         if (n <= 0) {       
+//             return 1;
+//         } else if (n === 1) {       
+//             return total;
+//         }  else {        
+//             total *= factorial(n - 1);
+//         }  
+//         return(total);
+//     } else {
+//         return 'Введите целое не отрицательное число';
+//     }
+// }
 
 
-console.log(factorial(-3));
+// console.log(factorial(-3));
+
+'use strict';
+
+const now = new Date(2020, 5, 1, 20);
+
+console.log(now);
